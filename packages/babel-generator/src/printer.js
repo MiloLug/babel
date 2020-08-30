@@ -475,7 +475,11 @@ export default class Printer {
 
       if (opts.statement) this._printNewline(true, node, parent, newlineOpts);
 
-      this.print(node, parent);
+	  if (opts.wrapper && opts.wrapper.left)
+	  	opts.wrapper.left.call(this);
+	  this.print(node, parent);
+	  if (opts.wrapper && opts.wrapper.right)
+		opts.wrapper.right.call(this);
 
       if (opts.iterator) {
         opts.iterator(node, i);

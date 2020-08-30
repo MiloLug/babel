@@ -84,7 +84,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --format=codeframe"
+      "eslint --format=codeframe --fix"
     ]
   },
   "husky": {
