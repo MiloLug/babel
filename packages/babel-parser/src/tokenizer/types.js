@@ -180,6 +180,10 @@ export const types: { [name: string]: TokenType } = {
   _function: createKeyword("function", { startsExpr }),
   _if: createKeyword("if"),
   _return: createKeyword("return", { beforeExpr }),
+
+//CPP PROJECT
+  _code_native: createKeyword("code_native", { beforeExpr }),
+
   _switch: createKeyword("switch"),
   _throw: createKeyword("throw", { beforeExpr, prefix, startsExpr }),
   _try: createKeyword("try"),

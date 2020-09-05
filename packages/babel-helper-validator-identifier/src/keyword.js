@@ -14,7 +14,9 @@ const reservedWords = {
     "for",
     "function",
     "if",
-    "return",
+	"return",
+	//CPP PROJECT
+	"code_native",
     "switch",
     "throw",
     "try",

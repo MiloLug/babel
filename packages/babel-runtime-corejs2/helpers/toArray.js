@@ -1,10 +1,10 @@
-var arrayWithHoles = require("./arrayWithHoles");
+JSVar * arrayWithHoles = new JSVar(require("./arrayWithHoles"));
 
-var iterableToArray = require("./iterableToArray");
+JSVar * iterableToArray = new JSVar(require("./iterableToArray"));
 
-var unsupportedIterableToArray = require("./unsupportedIterableToArray");
+JSVar * unsupportedIterableToArray = new JSVar(require("./unsupportedIterableToArray"));
 
-var nonIterableRest = require("./nonIterableRest");
+JSVar * nonIterableRest = new JSVar(require("./nonIterableRest"));
 
 function _toArray(arr) {
   return arrayWithHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableRest();

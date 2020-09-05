@@ -101,7 +101,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@babel/core@npm:^7.1.0, @babel/core@npm:^7.11.0":
+"@babel/core@npm:^7.1.0":
   version: 7.11.4
   resolution: "@babel/core@npm:7.11.4"
   dependencies:
@@ -122,6 +122,30 @@ __metadata:
     semver: ^5.4.1
     source-map: ^0.5.0
   checksum: 21b40a4242f308c2ccbcc07393bc47ef1ed3f6b4f6db5081801cf4c504926e28e24130bf4afd81ff9b0d6c61cdbb873492c892d0cebdb2e5f5cfb9711b17f089
+  languageName: node
+  linkType: hard
+
+"@babel/core@npm:^7.11.0":
+  version: 7.11.6
+  resolution: "@babel/core@npm:7.11.6"
+  dependencies:
+    "@babel/code-frame": ^7.10.4
+    "@babel/generator": ^7.11.6
+    "@babel/helper-module-transforms": ^7.11.0
+    "@babel/helpers": ^7.10.4
+    "@babel/parser": ^7.11.5
+    "@babel/template": ^7.10.4
+    "@babel/traverse": ^7.11.5
+    "@babel/types": ^7.11.5
+    convert-source-map: ^1.7.0
+    debug: ^4.1.0
+    gensync: ^1.0.0-beta.1
+    json5: ^2.1.2
+    lodash: ^4.17.19
+    resolve: ^1.3.2
+    semver: ^5.4.1
+    source-map: ^0.5.0
+  checksum: ad61c22807c904247ae61f11d176b33b3e44f0f2ca3b8d2b31e781ebd558db3381291f5a8a6a3acc28f5c1d6fdbb2b3ad29ca73b4d656d128a406e641b2e985a
   languageName: node
   linkType: hard
 
@@ -250,6 +274,17 @@ __metadata:
     jsesc: ^2.5.1
     source-map: ^0.5.0
   checksum: 1244facf6e03ea120ee6f7520eb7e7347ef97a3ece7ccf5d3efd5a70e6c4f85c67d7e8b9dc533ee071c95d91fe0ff8c1b9cf1a59447f4bc1caddcace64e77dfb
+  languageName: node
+  linkType: hard
+
+"@babel/generator@npm:^7.11.5, @babel/generator@npm:^7.11.6":
+  version: 7.11.6
+  resolution: "@babel/generator@npm:7.11.6"
+  dependencies:
+    "@babel/types": ^7.11.5
+    jsesc: ^2.5.1
+    source-map: ^0.5.0
+  checksum: 734bd60e018deaf7712c111bb5092d0382d3c217399569f1137f0100f672bcc1a086ae3a34efa0d604951ba9070f9bf554a4690c6bfe39123b05b89a4444e9c7
   languageName: node
   linkType: hard
 
@@ -895,6 +930,15 @@ __metadata:
   bin:
     parser: ./bin/babel-parser.js
   checksum: 06337dd30f432634503542a489bc4106a7505e7551c2feae0f1d25f35dfed9d1192373b3366ffd3a9a3ee65aeec60bb9c7d0612f9e0cfc17835eae467701b42a
+  languageName: node
+  linkType: hard
+
+"@babel/parser@npm:^7.11.5":
+  version: 7.11.5
+  resolution: "@babel/parser@npm:7.11.5"
+  bin:
+    parser: ./bin/babel-parser.js
+  checksum: ef2874e4d27eaa86777680505e57a7b36549c9602c682372d8b7c6234dff84cb8d03bdce65002a3e98921d83233b5af451d6c9dd9c681232ebe4c4ee9f41318e
   languageName: node
   linkType: hard
 
@@ -3325,6 +3369,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/traverse@npm:^7.11.5":
+  version: 7.11.5
+  resolution: "@babel/traverse@npm:7.11.5"
+  dependencies:
+    "@babel/code-frame": ^7.10.4
+    "@babel/generator": ^7.11.5
+    "@babel/helper-function-name": ^7.10.4
+    "@babel/helper-split-export-declaration": ^7.11.0
+    "@babel/parser": ^7.11.5
+    "@babel/types": ^7.11.5
+    debug: ^4.1.0
+    globals: ^11.1.0
+    lodash: ^4.17.19
+  checksum: 206010caeed881da55cf0e76f1c8688af072eba8dd38aa94b01fc04ab7b9ca2007b5fbc566d478555e78ae0780f399bdac1434c9ee6ea3ac2a452832fa4cab02
+  languageName: node
+  linkType: hard
+
 "@babel/traverse@workspace:^7.10.4, @babel/traverse@workspace:^7.11.0, @babel/traverse@workspace:packages/babel-traverse":
   version: 0.0.0-use.local
   resolution: "@babel/traverse@workspace:packages/babel-traverse"
@@ -3350,6 +3411,17 @@ __metadata:
     lodash: ^4.17.19
     to-fast-properties: ^2.0.0
   checksum: 46e2fcd49d1c6d3261fcc3e88906fa39661a193365325ca94b9b1d59f949cef8546e3aba3e13a122b1bf2a493120ad00c06533ae0c428ad60ce81ee2a2649964
+  languageName: node
+  linkType: hard
+
+"@babel/types@npm:^7.11.5":
+  version: 7.11.5
+  resolution: "@babel/types@npm:7.11.5"
+  dependencies:
+    "@babel/helper-validator-identifier": ^7.10.4
+    lodash: ^4.17.19
+    to-fast-properties: ^2.0.0
+  checksum: a1515b3ed19a8499f1f27d2c90537803b3e77f6d100ef1c327c86f85817ad2d915a61ae777eaacd9d955999db4ea68d6bb3b5933e0611d3d18a6ffc95430f44a
   languageName: node
   linkType: hard
 

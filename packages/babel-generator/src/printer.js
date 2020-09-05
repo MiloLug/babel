@@ -47,6 +47,8 @@ export default class Printer {
   _printedComments: WeakSet = new WeakSet();
   _endsWithInteger = false;
   _endsWithWord = false;
+  
+  _jsvar_plain_wrap: boolean = false;
 
   generate(ast) {
     this.print(ast);
@@ -460,6 +462,8 @@ export default class Printer {
     }
   }
 
+
+
   printJoin(nodes: ?Array, parent: Object, opts = {}) {
     if (!nodes?.length) return;
 
@@ -475,11 +479,9 @@ export default class Printer {
 
       if (opts.statement) this._printNewline(true, node, parent, newlineOpts);
 
-	  if (opts.wrapper && opts.wrapper.left)
-	  	opts.wrapper.left.call(this);
-	  this.print(node, parent);
-	  if (opts.wrapper && opts.wrapper.right)
-		opts.wrapper.right.call(this);
+      if (opts.wrapper && opts.wrapper.left) opts.wrapper.left.call(this);
+      this.print(node, parent);
+      if (opts.wrapper && opts.wrapper.right) opts.wrapper.right.call(this);
 
       if (opts.iterator) {
         opts.iterator(node, i);

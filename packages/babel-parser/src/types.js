@@ -215,6 +215,12 @@ export type ReturnStatement = NodeBase & {
   argument: ?Expression,
 };
 
+//CPP PROJECT
+export type CodeNativeStatement = NodeBase & {
+	type: "CodeNativeStatement",
+	argument: StringLiteral | TemplateLiteral,
+};
+
 export type LabeledStatement = NodeBase & {
   type: "LabeledStatement",
   label: Identifier,

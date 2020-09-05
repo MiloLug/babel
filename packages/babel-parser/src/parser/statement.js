@@ -194,7 +194,12 @@ export default class StatementParser extends ExpressionParser {
       case tt._if:
         return this.parseIfStatement(node);
       case tt._return:
-        return this.parseReturnStatement(node);
+		return this.parseReturnStatement(node);
+		
+	//CPP PROJECT
+	  case tt._code_native:
+		return this.parseCodeNativeStatement(node);
+
       case tt._switch:
         return this.parseSwitchStatement(node);
       case tt._throw:
@@ -577,6 +582,23 @@ export default class StatementParser extends ExpressionParser {
     }
 
     return this.finishNode(node, "ReturnStatement");
+  }
+
+  //CPP PROJECT
+  parseCodeNativeStatement(node: N.CodeNativeStatement): N.CodeNativeStatement {
+    this.next();
+
+	node.argument = this.parseExpression();
+	switch(node.argument.type){
+		case "TemplateLiteral":
+			node.argument.code = node.argument.quasis[0].value.cooked;
+			break;
+		case "StringLiteral":
+			node.argument.code = node.argument.value;
+			break;
+	}
+    this.semicolon();
+    return this.finishNode(node, "CodeNativeStatement");
   }
 
   parseSwitchStatement(node: N.SwitchStatement): N.SwitchStatement {

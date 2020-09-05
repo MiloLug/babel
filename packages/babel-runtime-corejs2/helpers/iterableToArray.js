@@ -1,8 +1,8 @@
-var _Array$from = require("../core-js/array/from");
+JSVar * _Array$from = new JSVar(require("../core-js/array/from"));
 
-var _isIterable = require("../core-js/is-iterable");
+JSVar * _isIterable = new JSVar(require("../core-js/is-iterable"));
 
-var _Symbol = require("../core-js/symbol");
+JSVar * _Symbol = new JSVar(require("../core-js/symbol"));
 
 function _iterableToArray(iter) {
   if (typeof _Symbol !== "undefined" && _isIterable(Object(iter))) return _Array$from(iter);
